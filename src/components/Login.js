@@ -1,10 +1,14 @@
-import { useState } from "react";
+import {  useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import {auth} from "../firebase"
+import {auth} from "../firebase";
 import { useNavigate } from "react-router-dom";
-
+import UserContext from "../utils/UserContext";
+import { useContext } from "react";
 
 const Login = ()=>{ 
+
+    const {loggedInUser , setUserName}= useContext(UserContext);
+    
   const navigate = useNavigate();
   const [values , setValues] = useState({
       
@@ -12,6 +16,7 @@ const Login = ()=>{
       pass:"",
   });
 
+  
   const [errorMsg , setErrorMsg] = useState("");
   const [submitButtonDisabled , setSubmitbuttonDisabled] = useState(false);
 
@@ -28,9 +33,11 @@ const Login = ()=>{
      signInWithEmailAndPassword(auth , values.email , values.pass).then( async(res)=>{
           setSubmitbuttonDisabled(false);
         
+
          // redirection
-        { alert("login suceesFull")}
-         navigate("/");
+         { alert("login suceesFull")}
+        setUserName("user");
+       navigate("/");
          
       }).catch((err)=>
           {    setSubmitbuttonDisabled(false);
@@ -80,6 +87,7 @@ const Login = ()=>{
                 
                    
                     Do not have an Account ? 
+
                     <a className="no-underline text-blue-600" href="../signup/">
                         Create Account
                     </a>.
