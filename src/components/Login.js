@@ -36,7 +36,7 @@ const Login = ()=>{
 
          // redirection
          { alert("login suceesFull")}
-        setUserName("user");
+      
        navigate("/");
          
       }).catch((err)=>

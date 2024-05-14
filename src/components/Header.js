@@ -49,7 +49,7 @@ const Header = ()=>{
                    <li className="px-4 text-white"> <Link to="/login">Login</Link></li>
                   
                 }
-                {/* <li className="px-4 text-white">{loggedInUser}</li> */}
+                <li className="px-4 text-white">{loggedInUser}</li>
               </ul>
            </div>
         </div>
