@@ -9,12 +9,11 @@ const firebaseConfig = {
   storageBucket: "react-food-web-914e9.appspot.com",
   messagingSenderId: "119779775155",
   appId: "1:119779775155:web:a36b03f1a4b3ad598cd6c6",
-  measurementId: "G-VSN4FS6PXQ"
+  measurementId: "G-VSN4FS6PXQ",
 };
-
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
 //console.log(auth);
 
-export {app , auth};
+export { app, auth };

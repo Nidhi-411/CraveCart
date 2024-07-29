@@ -6,7 +6,9 @@ import { Link } from "react-router-dom";
 const Body = () => {
   // Local state variables
   const [listOfRestaurant, setListOfRestaurant] = useState([]);
-  const [listOfRestaurantForSearch, setListOfRestaurantForSearch] = useState([]);
+  const [listOfRestaurantForSearch, setListOfRestaurantForSearch] = useState(
+    []
+  );
   const [searchText, setSearchText] = useState("");
 
   console.log("Body Render", listOfRestaurant);
@@ -20,7 +22,9 @@ const Body = () => {
       const json = await response.json();
       console.log(json);
 
-      const restaurants = json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants || [];
+      const restaurants =
+        json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+          ?.restaurants || [];
       setListOfRestaurant(restaurants);
       setListOfRestaurantForSearch(restaurants);
     } catch (error) {
@@ -49,8 +53,9 @@ const Body = () => {
           <button
             className="p-2 bg-green-100 rounded-r-full border border-black"
             onClick={() => {
-              const filteredRestaurant = listOfRestaurantForSearch.filter((res) =>
-                res.info.name.toLowerCase().includes(searchText.toLowerCase())
+              const filteredRestaurant = listOfRestaurantForSearch.filter(
+                (res) =>
+                  res.info.name.toLowerCase().includes(searchText.toLowerCase())
               );
               setListOfRestaurant(filteredRestaurant);
             }}
@@ -62,7 +67,9 @@ const Body = () => {
           <button
             className="filter-btn px-4 py-2 bg-gray-100 border border-black rounded-full"
             onClick={() => {
-              const filteredList = listOfRestaurant.filter((res) => res.info.avgRating > 4.5);
+              const filteredList = listOfRestaurant.filter(
+                (res) => res.info.avgRating > 4.5
+              );
               setListOfRestaurant(filteredList);
             }}
           >
@@ -76,7 +83,11 @@ const Body = () => {
       ) : (
         <div className="flex flex-wrap">
           {listOfRestaurant.map((restaurant) => (
-            <Link key={restaurant.info.id} to={"/restaurants/" + restaurant.info.id} className="style-none">
+            <Link
+              key={restaurant.info.id}
+              to={"/restaurants/" + restaurant.info.id}
+              className="style-none"
+            >
               <RestaurantCard resData={restaurant} />
             </Link>
           ))}

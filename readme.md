@@ -1,28 +1,27 @@
-# CraveCart - 
+# CraveCart -
 
-## A food ordering web app 
+## A food ordering web app
 
-### build with React js , Redux js , Tailwind Css , 
+### build with React js , Redux js , Tailwind Css ,
 
-created this app using parcel bundler, 
+created this app using parcel bundler,
 
-Demo  -   https://www.linkedin.com/posts/nidhi-yadav-b69386247_react-redux-parcel-activity-7196120338538151936-Ls1Q?utm_source=share&utm_medium=member_desktop
+Demo - https://www.linkedin.com/posts/nidhi-yadav-b69386247_react-redux-parcel-activity-7196120338538151936-Ls1Q?utm_source=share&utm_medium=member_desktop
 
+🔹 Features
 
-🔹 Features 
--  View Restaurants
--  see their menu page
--  add items to cart 
--  remove items from cart 
--  discount funtionality 
--  sign up
--  login 
--  logout
-
+- View Restaurants
+- see their menu page
+- add items to cart
+- remove items from cart
+- discount funtionality
+- sign up
+- login
+- logout
 
 🔹 Tech Stack:
 
-- React 
+- React
 - Parcel Bundler
 - Redux Toolkit
 - Tailwind CSS
@@ -31,7 +30,6 @@ Demo  -   https://www.linkedin.com/posts/nidhi-yadav-b69386247_react-redux-parce
 🔹 API Integration:
 
 Leveraged Swiggy's live APIs for real-time data fetching
-
 
 🔹 Key Learnings:
 
@@ -58,4 +56,3 @@ Leveraged Swiggy's live APIs for real-time data fetching
 - Actions
 - Reducers
 - Selectors
-
