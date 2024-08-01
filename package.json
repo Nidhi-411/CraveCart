@@ -4,7 +4,8 @@
   "description": "\"Namste react by Akshay saini\"",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html",
+    
+    "build": "parcel build index.html --dist-dir build",
     "test": "jest"
   },
   "repository": {
